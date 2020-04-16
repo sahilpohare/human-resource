@@ -25,4 +25,5 @@ app.use('/api/ui', ui.router);
 app.get('/api/',(req,res)=>{
     res.json({server:'ss'});
 });
+app.use('/',express.static(__dirname+'/public/build'))
 app.listen(process.env.port || 3000,console.log('jingling on '+(process.env.port || 3000)));
